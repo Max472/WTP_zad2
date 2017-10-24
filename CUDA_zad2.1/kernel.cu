@@ -6,6 +6,16 @@
 
 #include <iostream>
 #include <Windows.h>
+
+// EXERCISE DESCRIPTION
+/*
+Æwiczenie 2 - Obliczenia ogólnego przeznaczenia na procesorach graficznych. Termin: na 4 zajêcia.
+Celem æwiczenia jest zaprojektowanie i implementacja masowo-równoleg³ego algorytmu do obliczania operacji mno¿enia macierzy przez wektor. Algorytm powinien dzia³aæ poprawnie dla macierzy kwadratowych o N na N elementach, gdzie N jest ca³kowit¹ potêg¹ dwóch.
+Podczas projektowania algorytmu nale¿y przyj¹æ:
+- nieskoñczon¹ liczbê równoleg³ych procesorów,
+- mo¿liwoœæ synchronizacji w¹tków obliczeniowych.
+*/
+// EXAMPLE APPLICATION
 /*
 using namespace std;
 
@@ -125,7 +135,7 @@ int main (void) {
     printf("<<<<<<<<<< initial data:\n");
         print_array(a, N, "in-vector");
         print_mat(b, N, N, "matrix");
-        print_array(c, N, "out-vector");
+        print_array(c, N, "out-");
 
         cudaMalloc((void**)&dev_a, sizeof(float)*N);
         cudaMalloc((void**)&dev_b, sizeof(float)*N*N);
