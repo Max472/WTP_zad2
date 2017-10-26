@@ -202,8 +202,8 @@ int main (void)
 
 	unsigned int Ns[] = { 0, 1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 	unsigned int N;
-	unsigned int tests = 3;
-	unsigned int repeats = 1;
+	unsigned int tests = 16;
+	unsigned int repeats = 10;
 	float *vector, *matrix, *result_gpu, *result_cpu;
 	float *dev_vector, *dev_matrix, *dev_result;
 
@@ -278,8 +278,8 @@ int main (void)
 		if (!verify) std::cout << N << "\t" << time_cpu << "\t" << time_gpu << "\t" << time_gpu + time_prep << "\n";
 	}
 
-	std::cin >> N;
-        return 0;
+	if(verify) std::cin >> N;
+    return 0;
 };
 
 void init_array(float * a, const int N)
